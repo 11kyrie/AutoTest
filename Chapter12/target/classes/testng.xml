@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="斑马钢琴app系统测试套件">
+    <test name="斑马钢琴app系统测试用例">
+        <classes>
+            <class name="com.course.cases.LoginTest">
+                <methods>
+                    <include name="loginTrue"/>
+                    <include name="loginFalse"/>
+                </methods>
+            </class>
+            <class name="com.course.cases.GetSmsCodeTest">
+                <methods>
+                    <include name="sendTrue"/>
+
+                    <include name="sendFalse"/>
+                </methods>
+
+            </class>
+            <class name="com.course.cases.HelpAdviseTest">
+                <methods>
+                    <include name="helpAdviseTrue"/>
+                    <include name="helpAdviseFalse"/>
+
+                </methods>
+            </class>
+            <class name="com.course.cases.GetIndexTest">
+                <methods>
+                    <include name="getIndex"/>
+
+                </methods>
+
+            </class>
+            <class name="com.course.cases.GetFadTest">
+                <methods>
+                    <include name="getFad"/>
+
+                </methods>
+
+             </class>
+            <class name="com.course.cases.VerifySmsCheckTest">
+                <methods>
+                    <include name="verifySmsCheckTrue"/>
+                    <include name="verifySmsCheckFalse"/>
+
+                </methods>
+
+            </class>
+<!--            <class name="com.course.cases.AddUserTest">-->
+<!--                <methods>-->
+<!--                    <include name="addUser"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.course.cases.GetUserInfoTest">-->
+<!--                <methods>-->
+<!--                    <include name="getUserInfo"/>-->
+
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.course.cases.UpdateUserInfoTest">-->
+<!--                <methods>-->
+<!--                    <include name="updateUserInfo"/>-->
+<!--                    <include name="deleteUser"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.course.cases.GetUserInfoListTest">-->
+<!--                <methods>-->
+<!--                    <include name="getUserListInfo"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+
+
+    </test>
+    <listeners>
+        <listener class-name="com.course.config.ExtentTestNGIReporterListener"/>
+
+    </listeners>
+</suite>

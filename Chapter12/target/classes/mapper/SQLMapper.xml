@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.course.model">
+    <!--获取登陆接口case-->
+    <select id="loginCase" parameterType="Integer" resultType="com.course.model.LoginCase">
+        select * from loginCase
+        where id=#{id};
+    </select>
+
+    <!--获取验证码接口case-->
+    <select id="getSmsCodeCase" parameterType="Integer" resultType="com.course.model.GetSmsCodeCase">
+        select * from getSmsCodeCase
+        where id=#{id};
+    </select>
+
+    <!--    反馈和建议-->
+    <select id="helpAdviseCase" parameterType="Integer" resultType="com.course.model.HelpAdviseCase">
+        select * from helpAdviseCase
+        where id=#{id};
+    </select>
+
+    <!--    获取首页-->
+    <select id="getIndexCase" parameterType="Integer" resultType="com.course.model.GetIndexCase">
+        select * from getIndexCase
+        where id=#{id};
+    </select>
+    <!--    获取fad-->
+    <select id="getFadCase" parameterType="Integer" resultType="com.course.model.GetFadCase">
+        select * from getFadCase
+        where id=#{id};
+    </select>
+    <select id="verifySmsCheckCase" parameterType="Integer" resultType="com.course.model.VerifySmsCheckCase">
+        select * from verifySmsCheckCase
+        where id=#{id};
+    </select>
+<!--    &lt;!&ndash;添加用户接口case&ndash;&gt;-->
+<!--    <select id="addUserCase" parameterType="Integer" resultType="com.course.model.AddUserCase">-->
+<!--        select * from addUserCase where id = #{id};-->
+
+<!--    </select>-->
+<!--    &lt;!&ndash;获取用户信息case&ndash;&gt;-->
+<!--    <select id="getUserInfoCase" parameterType="Integer" resultType="com.course.model.GetUserInfoCase">-->
+<!--        select * from getUserInfoCase where id=#{id};-->
+
+<!--    </select>-->
+<!--    &lt;!&ndash;获取用户列表case&ndash;&gt;-->
+<!--    <select id="getUserListCase" parameterType="Integer" resultType="com.course.model.GetUserListCase">-->
+<!--        select * from getUserListCase where id = #{id};-->
+<!--    </select>-->
+
+    <!--更新/删除用户case-->
+    <select id="updateUserInfoCase" parameterType="Integer" resultType="com.course.model.UpdateUserInfoCase">
+        select * from updateUserInfoCase where id = #{id};
+    </select>
+
+<!--    <select id="addUser" parameterType="com.course.model.AddUserCase" resultType="com.course.model.User">-->
+<!--        select * from user where-->
+<!--        userName = #{userName}-->
+<!--        and password=#{password}-->
+<!--        and sex=#{sex}-->
+<!--        and age=#{age}-->
+<!--        and permission=#{permission}-->
+<!--        and isDelete=#{isDelete}-->
+
+
+<!--    </select>-->
+
+<!--    &lt;!&ndash;获取用户信息&ndash;&gt;-->
+<!--    <select id="getUserInfo" parameterType="com.course.model.GetUserInfoCase" resultType="com.course.model.User">-->
+<!--        select * from user where-->
+<!--        id=#{userId}-->
+
+<!--    </select>-->
+
+<!--    &lt;!&ndash;获取用户列表&ndash;&gt;-->
+
+<!--    <select id="getUserList" parameterType="com.course.model.GetUserInfoCase" resultType="com.course.model.User">-->
+<!--        select * from user-->
+<!--        <trim prefix="WHERE" prefixOverrides="and">-->
+<!--            <if test="null !=userName and ''!=userName">-->
+<!--                AND userName=#{userName}-->
+<!--            </if>-->
+<!--            <if test="null !=sex and ''!=sex">-->
+<!--                AND sex=#{sex}-->
+<!--            </if>-->
+<!--            <if test="null !=age and ''!=age">-->
+<!--                AND age=#{age}-->
+<!--            </if>-->
+<!--        </trim>-->
+<!--        ;-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash;获取更新之后的数据&ndash;&gt;-->
+<!--    <select id="getUpdateUserInfo" parameterType="com.course.model.UpdateUserInfoCase" resultType="com.course.model.User">-->
+
+<!--        select * from user-->
+<!--        <trim prefix="WHERE" prefixOverrides="and">-->
+<!--            <if test="null !=userName and ''!=userName">-->
+<!--                AND userName=#{userName}-->
+<!--            </if>-->
+<!--            <if test="null !=sex and ''!=sex">-->
+<!--                AND sex=#{sex}-->
+<!--            </if>-->
+<!--            <if test="null !=age and ''!=age">-->
+<!--                AND age=#{age}-->
+<!--            </if>-->
+<!--            <if test="null !=permission and ''!=permission">-->
+<!--                AND permission=#{permission}-->
+<!--            </if>-->
+<!--            <if test="null !=isDelete and ''!=isDelete">-->
+<!--                AND isDelete=#{isDelete}-->
+<!--            </if>-->
+<!--        </trim>-->
+<!--        And id = #{userId};-->
+<!--    </select>-->
+
+
+</mapper>
